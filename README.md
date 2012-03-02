@@ -4,14 +4,15 @@ DCL_CameraNUI - DisCODe Component Library
 Description
 -----------
 
-Fill this section with description of this library.
+Provides communication with Kinect sensor.
 
 Dependencies
 ------------
 
-Put here any dependencies of this library (other DCLs, third party libraries etc)
+> OpenKinect/libfreenect with all its dependencies as described here http://openkinect.org/wiki/Getting_Started 
+> OpenCv (tested with version 2.3.1)
 
 Maintainer
 ----------
 
-Provide any information about yourself
+Michal Lisicki
