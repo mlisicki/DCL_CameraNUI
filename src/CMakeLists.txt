@@ -1,4 +1,5 @@
 SET(CMAKE_INCLUDE_CURRENT_DIR ON)
+SET(WITH_OPENNI ON)
 
 include_directories(.)
 
@@ -14,6 +15,10 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 
 # # OpenCV library
 FIND_PACKAGE( OpenCV REQUIRED )
+
+FIND_PACKAGE( OpenNI REQUIRED )
+include_directories(${OpenNI_INCLUDE_DIR})
+set(LIBS ${LIBS} ${OpenNI_LIBRARY})
 
 # # libfreenect
 find_package(libfreenect REQUIRED)

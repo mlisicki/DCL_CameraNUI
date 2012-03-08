@@ -6,6 +6,7 @@
  */
 
 #include "FreenectNUIDevice.hpp"
+#include "DepthModeTranslator.hpp"
 
 using namespace cv;
 using namespace std;

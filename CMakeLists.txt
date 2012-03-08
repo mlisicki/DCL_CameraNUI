@@ -19,3 +19,16 @@ IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
 ADD_SUBDIRECTORY(src)
+
+OPTION(WITH_OPENNI "OpenNI" OFF)
+
+FILE(WRITE "${PROJECT_SOURCE_DIR}/src/Components/CameraNUI/conf.hpp" "")
+IF(WITH_OPENNI)
+  configure_file (
+    "${PROJECT_SOURCE_DIR}/src/Components/CameraNUI/conf.hpp.in"
+    "${PROJECT_SOURCE_DIR}/src/Components/CameraNUI/conf.hpp"
+  )
+  include_directories("${PROJECT_SOURCE_DIR}")
+ENDIF(WITH_OPENNI)
+
+set(CMAKE_CXX_FLAGS "-fpermissive" CACHE STRING "Flags" FORCE)
