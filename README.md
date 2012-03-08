@@ -14,6 +14,8 @@ Available parameters:
 
 - <camera_mode> 'rgb' or 'gray'
 
+- <skip_stop> prevents kinect from shutdown, which often takes long time and can be omitted for debugging purposes
+
 Example is provided with the code
 
 Dependencies
